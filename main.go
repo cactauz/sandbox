@@ -1,13 +1,16 @@
 package main
 
+import "fmt"
+
 func main() {
-    v, err := divide(10, 0)
-    if err != nil {
-      fmt.Println("uh oh:", err)
-    }
-    fmt.Println("hello, %f", v)
+	v, err := divide(10, 0)
+	if err != nil {
+		fmt.Println("uh oh:", err)
+		return
+	}
+	fmt.Println("hello, %d", v)
 }
 
-func divide(n, d float64) (float64, error) {
-    return n / d, nil
+func divide(n, d int) (int, error) {
+	return n / d, nil
 }
