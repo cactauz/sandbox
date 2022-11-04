@@ -9,5 +9,5 @@ func main() {
 }
 
 func divide(n, d float64) (float64, error) {
-    return n / d   
+    return n / d, nil
 }
